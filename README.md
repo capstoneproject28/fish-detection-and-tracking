@@ -1,2 +1,2 @@
-# Object-Detection-and-Tracking
+# Object Detection and Tracking
 Capstone Project 28
