@@ -67,7 +67,7 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 - Rohan Soni
 - Adnan Zafar
 - Luke Valentino
-- Hammad Ahmad
+- Hammad Ahmed
 
 ## License
 
