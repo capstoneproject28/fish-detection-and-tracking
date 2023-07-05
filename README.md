@@ -65,7 +65,7 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 - Muhammad Abubakar
 - Josh McEvoy
 - Rohan Soni
-- Adnan Zafar
+- Adnan Zafar (103169535)
 - Luke Valentino
 - Hammad Ahmad
 
