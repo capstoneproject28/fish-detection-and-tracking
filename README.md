@@ -1,6 +1,6 @@
 # Video Image Analysis for Object Detection and Tracking
 
-This project is a web application that allows users to upload videos containing fish, which are then analyzed using a machine learning model for object detection and tracking. The processed video can be downloaded with bounding boxes showing the detected objects. The application also provides statistics derived from the processed video.
+This project is a web application that allows users to upload videos containing fish, which are then analyzed using a machine-learning model for object detection and tracking. The processed video can be downloaded with bounding boxes showing the detected objects. The application also provides statistics derived from the processed video.
 
 The frontend of this application is built with React.js, while the backend uses Django. User authentication is included, with a login page for users.
 
