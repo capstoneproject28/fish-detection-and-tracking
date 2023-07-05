@@ -16,11 +16,11 @@ The frontend of this application is built with React.js, while the backend uses 
 
 1. Clone the repository to your local machine:
 
-   `git clone https://github.com/<your-github-username>/video-image-analysis.git`
+   `git clone https://github.com/capstoneproject28/fish-detection-and-tracking.git`
 
 2. Navigate to the project directory:
 
-   `cd video-image-analysis`
+   `cd fish-detection-and-tracking`
 
 3. Build and run the Docker containers:
 
