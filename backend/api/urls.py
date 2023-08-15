@@ -1,6 +1,7 @@
-from .views import main
+from api.views import VideoView, CustomUserView
 from django.urls import path
 
 urlpatterns = [
-    path('home', main)
+    path('video', VideoView.as_view()),
+    path('user', CustomUserView.as_view()),
 ]

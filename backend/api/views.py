@@ -1,6 +1,14 @@
 from django.shortcuts import render
-from django .http import HttpResponse
+from rest_framework import generics
+from api.models import Video
+from api.serializers import VideoSerializer, CustomUserSerializer
 
-# Create your views here.
-def main(request):
-    return HttpResponse("<h1>hello</h1>")
+
+class VideoView(generics.ListAPIView):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
+
+
+class CustomUserView(generics.ListAPIView):
+    queryset = Video.objects.all()
+    serializer_class = CustomUserSerializer
