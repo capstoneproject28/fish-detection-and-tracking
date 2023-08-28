@@ -40,32 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-.App {
-  display: flex;
-  height: 100vh;
-}
-
-.left {
-  background-color: #e9e9e9; /* you can change this to your preference */
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.right {
-  width: 50%;
-  padding: 40px;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}

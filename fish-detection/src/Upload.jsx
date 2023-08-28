@@ -16,18 +16,27 @@ function handleUpload(){
 
     const fd = new FormData()
     fd.append('file', file)
-
+    setMsg("Uploading...")
+    setProgress(prevState => {
+        return{...prevState, started: true}
+    })
     axios.post('http://httpbin.org/post', fd, {
         onUploadProgress: (progressEvent)=> { 
-            console.log(progressEvent.progressEvent*100)
+            setProgress(prevState => {
+                return{ ...prevState, pc: progressEvent.progress*100}
+            })
         }, headers: {
             "Custom-header" : "value",
-
-
         }
     })
-    .then(res => console.log(res.data))
-    .catch(err => console.error(err))
+    .then(res => {
+        setMsg("Upload successfull");
+        console.log(res.data);
+    })
+    .catch(err => {
+        setMsg("Upload failed");
+        console.error(err);
+    })
 }
 return(
     <div className='App'>
@@ -35,6 +44,9 @@ return(
       <input onChange={ (e)=> {setFile(e.target.files[0])}} type="file" />
 
       <button onClick={handleUpload}>Upload</button>
+
+      {progress.started && <progress max = "100" value= {progress.pc}></progress>}
+      {msg && <span>{msg}</span>}
     </div>
   );
 }
