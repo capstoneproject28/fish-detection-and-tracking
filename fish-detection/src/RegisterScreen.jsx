@@ -1,7 +1,10 @@
 import React from 'react';
 
 function RegisterScreen() {
-  return;
+  return (
+    <>
+    </>
+  );
 }
 
 export default RegisterScreen;

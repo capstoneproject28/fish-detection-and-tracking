@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import Upload from './Upload';
 
 function App() {
-  return <>
-    <Upload />
-  </>
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      
+    </>
+  )
 }
 
 export default App;
