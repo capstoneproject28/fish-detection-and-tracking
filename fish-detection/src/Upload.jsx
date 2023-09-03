@@ -39,7 +39,7 @@ function handleUpload(){
     })
 }
 return(
-    <div className='App'>
+    <div class="uploadBox">
       <h1>Upload video</h1>
       <input onChange={ (e)=> {setFile(e.target.files[0])}} type="file" />
 
