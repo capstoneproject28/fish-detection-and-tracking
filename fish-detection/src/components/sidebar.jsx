@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "./css/main.css"
+import "../css/main.css"
 
 function Sidebar() {
 	return (

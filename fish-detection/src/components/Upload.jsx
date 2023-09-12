@@ -1,7 +1,7 @@
 //import './App.css'
 import React from 'react';
 import Sidebar from './sidebar.jsx'
-import Upload from './Upload';
+import Upload from '../Upload.jsx';
 
 function App() {
 
