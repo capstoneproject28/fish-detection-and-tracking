@@ -53,7 +53,7 @@ function Upload() {
 							preload="auto"
 							width="100%"
 							height="70%"
-						><source src={videoSrc} type="video/mp4" /></video>
+						><source src={video} type="video/mp4" /></video>
 					</div>
 				) : (
 					<div>no video yet</div>
