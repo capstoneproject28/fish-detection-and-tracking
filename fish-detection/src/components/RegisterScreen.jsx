@@ -20,12 +20,9 @@ function RegisterScreen() {
 		await axios
 			.post("http://127.0.0.1:8000/api/register/", fd)
 			.then((response) => {
-				alert("getshere");
 				console.log(response.data);
 				if (response !== null || "" || undefined) {
-					alert("hello");
-					//Navigate to Login Page
-					//navigate("/");
+					navigate("/");
 				}
 			})
 			.catch((error) => {
