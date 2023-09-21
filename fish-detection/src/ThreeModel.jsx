@@ -6,5 +6,5 @@ export default function ThreeModel()
 {
     const model = useLoader(GLTFLoader, './scene.gltf')
     console.log(model)
-
+    
 }

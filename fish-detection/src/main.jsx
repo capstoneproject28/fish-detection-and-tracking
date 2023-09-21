@@ -13,12 +13,13 @@ import ThreeModel from './ThreeModel.jsx';
 
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
+import Navbar from './Navbar.jsx';
 
 
 export default function Main() {
   return (
     <>
-    <Upload />
+    <Lpage />
     </>
     /*
     <BrowserRouter>
