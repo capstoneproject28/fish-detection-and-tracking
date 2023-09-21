@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from './components/App.jsx'
@@ -10,11 +9,16 @@ import Sidebar from './components/sidebar.jsx';
 import SignInSignUp from './SignInSignUp.jsx';
 import RegisterScreen from './components/RegisterScreen.jsx';
 import Lpage from './Lpage.jsx';
+import ThreeModel from './ThreeModel.jsx';
+
+import ReactDOM from 'react-dom/client'
+import { Canvas } from '@react-three/fiber'
+
 
 export default function Main() {
   return (
     <>
-    <Lpage />
+    <Upload />
     </>
     /*
     <BrowserRouter>

@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function Lpage() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome to AquaVision</h1>
         <p>Your friendly video image analysis for fish detection and tracking!</p>
       </header>
-
       <section className="App-intro">
         <h2>Why AquaVision?</h2>
         <p>With state-of-the-art machine learning, AquaVision provides unparalleled accuracy in tracking and detecting fish in any environment.</p>
@@ -34,7 +33,7 @@ function App() {
           <p>Your data is safe with our encrypted storage solutions.</p>
         </div>
       </section>
-
+    
       <footer className="App-footer">
         <p>Contact us for more information.</p>
         <br></br>
@@ -46,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default Lpage;
