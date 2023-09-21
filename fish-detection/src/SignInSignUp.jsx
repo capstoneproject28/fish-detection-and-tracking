@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import "./css/signup.css"
 export default function SignInSignUp() {
   useEffect(() => {
     document.querySelector('.img__btn').addEventListener('click', function() {

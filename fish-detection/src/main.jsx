@@ -13,12 +13,16 @@ import ThreeModel from './ThreeModel.jsx';
 
 import ReactDOM from 'react-dom/client'
 import Navbar from './Navbar.jsx';
+import Mlalgo from './Mlalgo.jsx';
 
 
 export default function Main() {
   return (
     <>
-    <Navbar />
+     <div className="main-container">
+        <Navbar />
+        <Mlalgo />
+    </div>
     </>
     /*
     <BrowserRouter>
