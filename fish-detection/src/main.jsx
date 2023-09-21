@@ -9,13 +9,12 @@ import Upload from './Upload.jsx';
 import Sidebar from './components/sidebar.jsx';
 import SignInSignUp from './SignInSignUp.jsx';
 import RegisterScreen from './components/RegisterScreen.jsx';
+import Lpage from './Lpage.jsx';
 
 export default function Main() {
   return (
     <>
-    
-    <SignInSignUp />
-
+    <Lpage />
     </>
     /*
     <BrowserRouter>

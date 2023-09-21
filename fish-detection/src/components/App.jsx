@@ -6,12 +6,14 @@ import Upload from '../Upload.jsx';
 function App() {
 
   return (
+	<>
 	<div className="app">
 		<Sidebar />
 		<div class="mainContent">
 			<Upload />
 		</div>
 	</div>
+	</>
   )
 
 }
