@@ -14,6 +14,7 @@ import ThreeModel from './ThreeModel.jsx';
 import ReactDOM from 'react-dom/client'
 import Navbar from './Navbar.jsx';
 import Mlalgo from './Mlalgo.jsx';
+import AnalyticsScreen from './AnalyticsScreen.jsx';
 
 
 export default function Main() {
@@ -21,7 +22,9 @@ export default function Main() {
     <>
      <div className="main-container">
         <Navbar />
-        <Mlalgo />
+        <div className="content">
+          <AnalyticsScreen />
+        </div>
     </div>
     </>
     /*

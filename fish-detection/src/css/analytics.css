@@ -1,0 +1,37 @@
+.analytics-screen {
+    padding: 1em;
+  }
+  
+  .video-section,
+  .graph-section {
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  /* Existing styles... */
+
+.graph-section {
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  /* ...existing CSS */
+
+/* ...existing CSS */
+
+.analytics-screen button {
+    background-color: blue;
+    color: white; /* Set the text color to white so it's readable on the blue background */
+    padding: 10px 20px; /* Add some padding for better appearance */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .analytics-screen button:hover {
+    background-color: darkblue; /* Slightly darker blue on hover for better UX */
+  }
+  
+  /* ...existing CSS */
+  
+ 
