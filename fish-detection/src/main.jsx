@@ -13,6 +13,7 @@ import RegisterScreen from './components/RegisterScreen.jsx';
 export default function Main() {
   return (
     <>
+    
     <SignInSignUp />
 
     </>

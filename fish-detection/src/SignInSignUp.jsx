@@ -24,15 +24,12 @@ export default function SignInSignUp() {
           <button type="button" className="submit">
             Sign In
           </button>
-          <button type="button" className="fb-btn">
-            Connect with <span>facebook</span>
-          </button>
         </div>
         <div className="sub-cont">
           <div className="img">
             <div className="img__text m--up">
               <h2>New here?</h2>
-              <p>Sign up and discover great amount of new opportunities!</p>
+              <p>Sign up and see beyond the surface with AquaViSion!</p>
             </div>
             <div className="img__text m--in">
               <h2>One of us?</h2>
@@ -44,7 +41,9 @@ export default function SignInSignUp() {
             </div>
           </div>
           <div className="form sign-up">
-            <h2>Time to feel like home,</h2>
+          <h2>Welcome to AquaVision</h2>
+          <br></br>
+					<p>See Beyond the Surface with Aquavision: Precision Fish Tracking and Analysis.</p>
             <label>
               <span>Name</span>
               <input type="text" />
