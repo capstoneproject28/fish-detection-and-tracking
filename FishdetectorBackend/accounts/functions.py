@@ -36,16 +36,6 @@ def convert_avi_to_mp4(input_path, output_path):
         print("Conversion failed:", str(e))
 
 
-""" def upload_video_to_firebase(video_path, destination_path):
-    bucket = storage.bucket()
-    blob = bucket.blob(destination_path)
-    blob.upload_from_filename(video_path)
-    blob.make_public()
-    public_url = blob.public_url
-
-    return public_url """
-
-
 def upload_video_to_firebase(video_path, destination_path, result_name):
     bucket = storage.bucket()
     blob = bucket.blob(destination_path)
