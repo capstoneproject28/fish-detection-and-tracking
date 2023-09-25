@@ -15,19 +15,29 @@ import ReactDOM from 'react-dom/client'
 import Navbar from './Navbar.jsx';
 import Mlalgo from './Mlalgo.jsx';
 import AnalyticsScreen from './AnalyticsScreen.jsx';
+import DropDown from './Dropdown.jsx';
 
 
 export default function Main() {
   return (
     <>
+      <DropDown />
+    </>
+     /*
      <div className="main-container">
         <Navbar />
         <div className="content">
           <AnalyticsScreen />
         </div>
     </div>
-    </>
+    */
     /*
+    
+    <Lpage />
+    <Upload />
+    <Mlalgo />
+    <DropDown />
+
     <BrowserRouter>
       <Routes>
         <Route path="/upload" element={ <App /> } />
