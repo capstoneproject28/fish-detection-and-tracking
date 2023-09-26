@@ -16,6 +16,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from firebase_admin import credentials, storage
 import firebase_admin
+import shutil
 
 cred = credentials.Certificate("./serviceAccountKey.json")
 firebase_admin.initialize_app(
@@ -101,6 +102,14 @@ def predict(request):
         # destination_path = f"{new_filename[:-4]}"
         public_url = upload_video_to_firebase(
             video_path, destination_path, result_name)
+
+        try:
+            os.remove(video_path)  # remove the .mp4 file
+            # remove the .avi file
+            os.remove(input_path)
+            shutil.rmtree("./upload")
+        except Exception as e:
+            print(f"Error deleting file: {e}")
 
         response_data = {
             'result_name': result_name,
