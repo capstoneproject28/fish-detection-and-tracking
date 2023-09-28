@@ -19,6 +19,7 @@
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-player": "^2.13.0",
+    "react-step-progress-bar": "^1.0.3",
     "react-three-fiber": "^6.0.13",
     "recharts": "^2.8.0",
     "three": "^0.153.0"

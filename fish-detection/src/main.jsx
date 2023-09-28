@@ -16,12 +16,14 @@ import Navbar from './Navbar.jsx';
 import Mlalgo from './Mlalgo.jsx';
 import AnalyticsScreen from './AnalyticsScreen.jsx';
 import DropDown from './Dropdown.jsx';
+import Progressbar from './progressbar.jsx';
+
 
 
 export default function Main() {
   return (
     <>
-      <DropDown />
+      <Progressbar />
     </>
      /*
      <div className="main-container">
