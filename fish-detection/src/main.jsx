@@ -17,13 +17,15 @@ import Mlalgo from './Mlalgo.jsx';
 import AnalyticsScreen from './AnalyticsScreen.jsx';
 import DropDown from './Dropdown.jsx';
 import Progressbar from './progressbar.jsx';
+import Carousel from './Carousel.jsx';
 
 
 
 export default function Main() {
   return (
     <>
-      <Progressbar />
+          <Upload />
+          <Carousel />
     </>
      /*
      <div className="main-container">
