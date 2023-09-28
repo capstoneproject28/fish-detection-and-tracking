@@ -24,8 +24,7 @@ import Carousel from './Carousel.jsx';
 export default function Main() {
   return (
     <>
-          <Upload />
-          <Carousel />
+    <ThreeModel />
     </>
      /*
      <div className="main-container">
