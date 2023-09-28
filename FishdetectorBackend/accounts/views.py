@@ -1,4 +1,3 @@
-
 from accounts.functions import handle_uploaded_file, convert_avi_to_mp4, upload_video_to_firebase, analytics
 from rest_framework import status
 from rest_framework.response import Response
@@ -17,6 +16,7 @@ from django.http import JsonResponse
 from firebase_admin import credentials, storage
 import firebase_admin
 import shutil
+import json
 
 cred = credentials.Certificate("./serviceAccountKey.json")
 firebase_admin.initialize_app(
@@ -86,8 +86,8 @@ def predict(request):
                              project=predict_path, name=f"{filename[:-4]}", save_txt=True, save_conf=True)
         result_name = result[0].names
         # print("the complete results are: ^^^^^ ",result)
-        print("Only the DATA RELATED TO Barchart is ")
-        print(result_name)
+        # print("Only the DATA RELATED TO Barchart is ")
+        # print(result_name)
         convert_path = f"{predict_path}/{filename[:-4]}/"
 
         analytics(convert_path)
@@ -102,7 +102,7 @@ def predict(request):
         video_path = output_path
 
         destination_path = f"{new_filename[:-4]}"
-        # destination_path = f"{new_filename[:-4]}"
+
         analytics_path = "./output_data.json"
 
         public_url = upload_video_to_firebase(
@@ -114,6 +114,7 @@ def predict(request):
             os.remove(input_path)
             shutil.rmtree("./upload")
             shutil.rmtree("./predictions")
+            os.remove(analytics_path)
         except Exception as e:
             print(f"Error deleting file: {e}")
 
