@@ -1,5 +1,5 @@
 
-from accounts.functions import handle_uploaded_file, convert_avi_to_mp4, upload_video_to_firebase
+from accounts.functions import handle_uploaded_file, convert_avi_to_mp4, upload_video_to_firebase, analytics
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
@@ -82,13 +82,16 @@ def predict(request):
 
         print(new_filename)
         predict_path = "./predictions"
-        result = model(file_path, save=True,
-                       project=predict_path, name=f"{filename[:-4]}")
+        result = model.track(file_path, save=True,
+                             project=predict_path, name=f"{filename[:-4]}", save_txt=True, save_conf=True)
         result_name = result[0].names
         # print("the complete results are: ^^^^^ ",result)
         print("Only the DATA RELATED TO Barchart is ")
         print(result_name)
         convert_path = f"{predict_path}/{filename[:-4]}/"
+
+        analytics(convert_path)
+
         annotated_video_file = os.path.join(convert_path, filename[:-4])
 
         input_path = f"{annotated_video_file}" + ".avi"
@@ -100,14 +103,17 @@ def predict(request):
 
         destination_path = f"{new_filename[:-4]}"
         # destination_path = f"{new_filename[:-4]}"
+        analytics_path = "./output_data.json"
+
         public_url = upload_video_to_firebase(
-            video_path, destination_path, result_name)
+            video_path, destination_path, analytics_path)
 
         try:
             os.remove(video_path)  # remove the .mp4 file
             # remove the .avi file
             os.remove(input_path)
             shutil.rmtree("./upload")
+            shutil.rmtree("./predictions")
         except Exception as e:
             print(f"Error deleting file: {e}")
 
