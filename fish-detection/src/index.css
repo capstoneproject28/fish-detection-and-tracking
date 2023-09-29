@@ -1,10 +1,11 @@
 .main-container {
   display: flex;
-  height: 100vh; /* Full height */
+  height: 100vh;
+  width: 100vw; /* Full height */
 }
 
 /* Style for Navbar */
-Navbar {
+.Navbar {
   flex: 0 0 200px; /* Fixed width, and it won't grow or shrink */
   background-color: #333; /* Sample background color */
   color: white; /* Sample text color */
@@ -13,9 +14,26 @@ Navbar {
 }
 
 /* Style for Lpage */
-Lpage {
+.Lpage {
   flex: 1; /* Takes up the remaining width */
   background-color: #f1f1f1; /* Sample background color */
   padding: 1em;
   overflow-y: auto; /* Scrollable */
+}
+
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: ivory;
+}
+
+html, body, #root, canvas {
+  margin: 0;
+  padding: 0;
 }

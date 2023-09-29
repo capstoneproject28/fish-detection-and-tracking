@@ -1,3 +1,20 @@
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: ivory;
+}
+
+html, body, #root, canvas {
+  margin: 0;
+  padding: 0;
+}
+/*
 .App {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -36,4 +53,4 @@
     color: white;
     padding: 1em 0;
   }
-  
+  */
