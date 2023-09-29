@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from './App.jsx'
 import Register from './components/RegisterScreen.jsx'
-import './index.css'
+
 import Upload from './Upload.jsx';
 import Sidebar from './components/sidebar.jsx';
 import SignInSignUp from './SignInSignUp.jsx';

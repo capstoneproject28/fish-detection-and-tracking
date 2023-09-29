@@ -69,3 +69,20 @@ body {
     background-color: #4d5ca1;
     cursor: pointer;
 }
+
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: ivory;
+}
+
+html, body, #root, canvas {
+  margin: 0;
+  padding: 0;
+}

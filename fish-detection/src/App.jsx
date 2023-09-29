@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
-import './App.css' 
+import './App.css'
 
 export default function App(){
     return(
