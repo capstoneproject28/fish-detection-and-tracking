@@ -5,7 +5,16 @@ body,
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     background: ivory;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block; /* removes any space below canvas */
+    width: 100%;
+    height: 100%;
 }

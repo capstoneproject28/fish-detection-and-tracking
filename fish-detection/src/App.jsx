@@ -7,6 +7,7 @@ export default function App(){
     return(
         <>
         <Canvas
+            style={{ width: '100%', height: '100%' }}
             shadows
             camera={ {
                 fov: 45,
