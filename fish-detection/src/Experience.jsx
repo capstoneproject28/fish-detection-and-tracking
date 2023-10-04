@@ -1,6 +1,6 @@
 import { OrbitControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
-import Fish from './Fish.jsx'
+import Fish from './designComponents/Fish.jsx'
 
 export default function Experience()
 {
