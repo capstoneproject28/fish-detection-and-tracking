@@ -64,7 +64,7 @@ section {
 
 	border-radius: 15px;
 	transition: all 0.5s ease;
-	filter: drop-shadow(0px 0px 20px #afafaf);
+	filter: drop-shadow(0px 0px 8px #afafaf);
 }
 
 .sidebar .profile {

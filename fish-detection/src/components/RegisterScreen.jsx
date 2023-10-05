@@ -22,7 +22,7 @@ function RegisterScreen() {
 			.then((response) => {
 				console.log(response.data);
 				if (response !== null || "" || undefined) {
-					navigate("/");
+					useNavigate().navigate("/");
 				}
 			})
 			.catch((error) => {

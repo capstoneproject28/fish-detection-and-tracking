@@ -1,0 +1,26 @@
+.mainContent {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	padding: 10px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.quarter {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	flex: 0 0 calc(50% - 20px);
+	height: 50vh;
+	padding: 20px;
+}
+
+.historyEntry {
+	width: 40%;
+	height: 30px;
+	background-color: cyan;
+	margin: 20px;
+}
