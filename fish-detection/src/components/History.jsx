@@ -3,6 +3,9 @@ import axios from 'axios'
 import '../css/main.css'
 import '../css/history.css'
 import Navbar from '../designComponents/Navbar.jsx';
+import Chart from "chart.js/auto";
+import { Bar } from "react-chartjs-2";
+
 
 export default function History() {
 
@@ -45,12 +48,57 @@ export default function History() {
 						<h1>Recent Uploads</h1>
 						{videoLinks.map((video, index) => (
 							<div className="historyEntry">
-								<div className="historyVideoSection">
-									<video src={video.url} className="videoEntry" controls preload="auto"></video>
+								<div className="historyEntryTopSection">
+									<div className="historyVideoSection">
+										<video src={video.url} className="videoEntry" controls preload="auto"></video>
+									</div>
+									<div className="historyInfoSection">
+										<h2>{video.filename}</h2>
+										<h3>View analytics</h3>
+									</div>
 								</div>
-								<div className="historyInfoSection">
-									<h2>{video.filename}</h2>
-									<h3>View analytics</h3>
+								<div className="historyEntryBottomSection">
+									<Bar
+										data={{
+											// Name of the variables on x-axies for each bar
+
+											labels: [...Object.values(video.result_name)],
+											datasets: [
+												{
+													// Label for bars
+													label: "prediction/specie name",
+													// Data or value of your each variable
+
+													data: [...Object.keys(video.result_name)],
+													// Color of each bar
+													backgroundColor: ["aqua", "green", "red", "yellow"],
+													// Border color of each bar
+													borderColor: ["aqua", "green", "red", "yellow"],
+													borderWidth: 0.5,
+												},
+											],
+										}}
+										// Height of graph
+										height={350}
+										options={{
+											maintainAspectRatio: false,
+											scales: {
+												yAxes: [
+													{
+														ticks: {
+															// The y-axis value will start from zero
+															beginAtZero: true,
+														},
+													},
+												],
+											},
+											legend: {
+												labels: {
+													fontSize: 15,
+												},
+											},
+										}}
+									/>
 								</div>
 							</div>
 						))}

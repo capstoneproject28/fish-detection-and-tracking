@@ -22,6 +22,7 @@ export default function Main() {
 			<Routes>
 				<Route path="/login" element={<SignInSignUp />} />
 				<Route path="/" element={<History />} />
+				<Route path="/upload" element={<Upload />} />
 				<Route path="/analytics" element={<Analytics />} />
 			</Routes>
 		</BrowserRouter>
