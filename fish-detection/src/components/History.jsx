@@ -9,7 +9,12 @@ import { Bar } from "react-chartjs-2";
 
 export default function History() {
 
+	//video history 
 	const [videoLinks, setVideoLinks] = useState([]);
+
+	//hide & show analytics for each entry
+	const [analyticsVisible, setAnalyticsVisible] = useState([false]);
+
 
 	const username = "Adnan2510";
 
@@ -20,7 +25,6 @@ export default function History() {
 			.get(apiUrl)
 			.then((response) => {
 				const processedData = response.data.videos.map((item) => {
-					console.log("wororrkringgg");
 
 					// Parse the result_name string into an object
 					const resultNameObject = JSON.parse(item.result_name);
@@ -33,11 +37,20 @@ export default function History() {
 					};
 				});
 				setVideoLinks(processedData);
+
+				setAnalyticsVisible(new Array(processedData.length).fill(false));
 			})
 			.catch((error) => {
 				console.error("Error fetching video links:", error);
 			});
 	}, [username]);
+
+	function viewAnalytics(index) {
+		var copiedAnalytics = JSON.parse(JSON.stringify(analyticsVisible));
+
+		copiedAnalytics[index] = !copiedAnalytics[index];
+		setAnalyticsVisible(copiedAnalytics);
+	}
 
 	return (
 		<>
@@ -54,10 +67,10 @@ export default function History() {
 									</div>
 									<div className="historyInfoSection">
 										<h2>{video.filename}</h2>
-										<h3>View analytics</h3>
+										<h3 onClick={() => viewAnalytics(index)}>View analytics</h3>
 									</div>
 								</div>
-								<div className="historyEntryBottomSection">
+								<div className={analyticsVisible[index] ? 'historyEntryBottomSection' : 'historyEntryBottomSection hidden'}>
 									<Bar
 										data={{
 											// Name of the variables on x-axies for each bar
@@ -66,7 +79,7 @@ export default function History() {
 											datasets: [
 												{
 													// Label for bars
-													label: "prediction/specie name",
+													label: "prediction/species name",
 													// Data or value of your each variable
 
 													data: [...Object.keys(video.result_name)],
