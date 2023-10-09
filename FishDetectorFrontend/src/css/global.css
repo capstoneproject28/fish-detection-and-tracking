@@ -1,0 +1,46 @@
+/* CSS attributes that are used across multiple pages */
+.formFormat {
+    width: 100%;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+}
+
+h3 {
+    font-weight:lighter;
+}
+
+body{
+    box-sizing: border-box;
+  }
+
+input[type="text"],
+input[type="password"] {
+    filter: drop-shadow(0px 0px 7px #ececec);
+    border: 0px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    margin: 12.5px;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    filter: drop-shadow(0px 0px 7px #e0e0e0);
+}
+
+input[type="submit"] {
+    background-color: #24A9E2;
+    font-weight: bold;
+    color: white;
+    width: auto;
+    padding: 20px 50px 20px 50px;
+    border: 0px solid white;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #219ace;
+    cursor: pointer;
+}
