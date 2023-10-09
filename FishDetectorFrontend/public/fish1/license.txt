@@ -1,0 +1,11 @@
+Model Information:
+* title:	Emperor Angelfish
+* source:	https://sketchfab.com/3d-models/emperor-angelfish-3dc2d360d98c485496899121792ebcce
+* author:	CGSoul (https://sketchfab.com/cgsoul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Emperor Angelfish" (https://sketchfab.com/3d-models/emperor-angelfish-3dc2d360d98c485496899121792ebcce) by CGSoul (https://sketchfab.com/cgsoul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
