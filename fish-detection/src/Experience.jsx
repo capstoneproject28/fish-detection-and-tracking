@@ -5,14 +5,16 @@ import Fish from './designComponents/Fish.jsx'
 export default function Experience()
 {
     return <>
-        <OrbitControls makeDefault />
+        <OrbitControls makeDefault enableZoom={false} enablePan={false} />
         <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 1.5 } shadow-normalBias={ 0.04 } />
-        <mesh receiveShadow position-x={0} position-y={ -0.78 } position-z= {0} rotation-x={ - Math.PI * 0.5 } scale={1.5 }>
-            <planeGeometry />
-            <meshStandardMaterial color="cyan" />
-        </mesh>
         <Fish />
     </>
 }
 
 //<Perf position="top-left" />
+//<OrbitControls makeDefault />
+/*<mesh receiveShadow position-x={0} position-y={ -0.78 } position-z= {0} rotation-x={ - Math.PI * 0.5 } scale={1.5 }>
+<planeGeometry />
+<meshStandardMaterial color="cyan" />
+</mesh>
+*/

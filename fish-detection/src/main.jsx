@@ -8,7 +8,7 @@ const SignInSignUp = React.lazy(() => import('./components/SignInSignUp.jsx'));
 const History = React.lazy(() => import('./components/History.jsx'));
 const Upload = React.lazy(() => import('./Upload.jsx'));
 const Analytics = React.lazy(() => import('./AnalyticsScreen.jsx'));
-
+const Lpage = React.lazy(() => import('./Lpage.jsx'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,7 +21,8 @@ export default function Main() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/login" element={<SignInSignUp />} />
-				<Route path="/" element={<History />} />
+				<Route path="/" element={<Lpage />} />
+				<Route path="/history" element={<History />} />
 				<Route path="/upload" element={<Upload />} />
 				<Route path="/analytics" element={<Analytics />} />
 			</Routes>
