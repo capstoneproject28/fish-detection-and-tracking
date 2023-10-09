@@ -26,6 +26,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
+    "recharts": "^2.8.0",
     "redux": "^4.2.1",
     "sort-by": "^1.2.0",
     "video-react": "^0.16.0",

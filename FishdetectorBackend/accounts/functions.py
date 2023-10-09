@@ -49,8 +49,7 @@ def analytics(label_path):
             label_map[idx] = label
 
     # Process txt files
-    txt_files = sorted([f for f in os.listdir(
-        txt_files_dir) if f.endswith('.txt')])
+    txt_files = sorted([f for f in os.listdir(txt_files_dir) if f.endswith('.txt')])
 
     data = {
         "overview": {
@@ -63,7 +62,6 @@ def analytics(label_path):
 
     total_confidence = 0.0
     all_species = set()
-    all_ids = set()
 
     for txt_file in txt_files:
         frame_data = {
@@ -74,34 +72,30 @@ def analytics(label_path):
         with open(os.path.join(txt_files_dir, txt_file), 'r') as f:
             for line in f:
                 parts = line.strip().split()
-                if len(parts) < 7:
+                if len(parts) < 6:
+                    print(f"Skipping line due to insufficient parts: {line}")
                     continue
 
                 species_id = parts[0]
-                species_name = label_map.get(
-                    species_id, f"Unknown_{species_id}")
+                species_name = label_map.get(species_id, f"Unknown_{species_id}")
                 bounding_box = list(map(float, parts[1:5]))
                 confidence = float(parts[5])
-                fish_id = int(parts[6])
 
                 total_confidence += confidence
                 all_species.add(species_name)
-                all_ids.add(fish_id)
 
                 fish_data = {
                     "species": species_name,
                     "bounding_box": bounding_box,
-                    "confidence": confidence,
-                    "id": fish_id
+                    "confidence": confidence
                 }
                 frame_data["fish"].append(fish_data)
 
         data["frames"].append(frame_data)
 
-    data["overview"]["total_fish"] = len(all_ids)
+    data["overview"]["total_fish"] = sum(len(frame["fish"]) for frame in data["frames"])
     data["overview"]["total_species"] = len(all_species)
-    data["overview"]["avg_confidence"] = total_confidence / \
-        len(all_ids) if all_ids else 0.0
+    data["overview"]["avg_confidence"] = total_confidence / data["overview"]["total_fish"] if data["overview"]["total_fish"] else 0.0
 
     # Save to output file
     with open(output_path, 'w') as f:
