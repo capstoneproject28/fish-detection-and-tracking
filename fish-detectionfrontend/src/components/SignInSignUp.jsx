@@ -77,7 +77,7 @@ export default function SignInSignUp() {
 		<>
 			<div className="cont">
 				<div className="form sign-in">
-					<h2>Welcome back</h2>
+					<img className="logo" src="../src/assets/logo/fullLogoBlue.png"></img>
 					<label>
 						<span>Username</span>
 						<input type="email" onChange={(e) => { setsUsername(e.target.value) }} />
@@ -106,11 +106,9 @@ export default function SignInSignUp() {
 						</div>
 					</div>
 					<div className="form sign-up">
-						<h2>Welcome to AquaVision</h2>
-						<br></br>
-						<p>See Beyond the Surface with Aquavision: Precision Fish Tracking and Analysis.</p>
+						<img className="logo" src="../src/assets/logo/fullLogoBlue.png"></img>
 						<label>
-							<span>Usernname</span>
+							<span>Username</span>
 							<input type="text" onChange={(e) => { setrUsername(e.target.value) }} />
 						</label>
 						<label>

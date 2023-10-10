@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import axios from 'axios'
 import '../css/main.css'
+import '../css/upload.css'
 import Navbar from '../designComponents/Navbar.jsx';
-import Carousel from '../Carousel';
 
 function Upload() {
 
