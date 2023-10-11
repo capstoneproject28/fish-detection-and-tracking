@@ -34,8 +34,10 @@ h1 {
 
 .algorithm {
   margin: 1em 0;
+  font-size: 1em;
+  font-weight: 500;
   padding: 1em;
   background-color: #f3f3f3;
+  width: 30%;
   border-radius: 8px;
-  text-align: center;
 }
