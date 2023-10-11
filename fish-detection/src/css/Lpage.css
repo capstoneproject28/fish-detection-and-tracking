@@ -32,22 +32,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-  
-.App-3dmodel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    pointer-events: none; /* Ensures that the 3D model doesn't interfere with page interactions */
-}
-
-
-.App-3dmodel-content {
-    flex: 1;
-    padding-left: 50px;
-}
 
 .App-footer {
     text-align: center;

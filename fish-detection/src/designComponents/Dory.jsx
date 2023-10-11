@@ -1,8 +1,8 @@
 import { Float, useAnimations, useGLTF } from '@react-three/drei'
 import { useEffect } from 'react'
 
-export default function Fish() {
-    const fish = useGLTF('./fish/scene.gltf')
+export default function Dory() {
+    const fish = useGLTF('./fish1/scene.gltf')
     const animations = useAnimations(fish.animations, fish.scene)
 
     const animationName = fish.animations[0].name;
@@ -23,7 +23,7 @@ export default function Fish() {
         <>
             <primitive
                 object={fish.scene}
-                scale={0.168}
+                scale={0.18}
                 position={[0, 0, 0]}
             />
         </>

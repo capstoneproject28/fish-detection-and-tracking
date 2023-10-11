@@ -1,10 +1,10 @@
 import React from 'react';
 import './css/Lpage.css';
 import { Canvas } from '@react-three/fiber'
-import Experience from './Experience';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Dory from './designComponents/Dory';
 
 function Lpage() {
   useEffect(() => {
@@ -19,21 +19,6 @@ function Lpage() {
         <h1>Welcome to AquaVision</h1>
         <p>Your friendly video image analysis for fish detection and tracking!</p>
       </header>
-      <section className="App-3dmodel">
-        <Canvas style={{ width: '60%', height: '100vh' }}
-         shadows camera={{ fov: 45, near: 0.1, far: 200, position: [-4, 3, 6]}}
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
-         >
-            <Experience />
-        </Canvas>
-      </section>
       <section className="App-details">
       <h2>Why AquaVision?</h2>
             <p>With state-of-the-art machine learning, AquaVision provides unparalleled accuracy in tracking and detecting fish in any environment.</p>

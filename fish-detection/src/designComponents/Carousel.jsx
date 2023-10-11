@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Carousel.css'
+import '../css/Carousel.css'
 const emojis = [
   ["🐳", "spouting whale"],
   ["🐋", "whale"],

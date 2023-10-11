@@ -1,8 +1,6 @@
 /* CSS that applies to all parts of the website */
-
 #root, .main-container {
     display: flex;
-    overflow: hidden;
 }
 
 * {
@@ -19,21 +17,3 @@ body {
     display: flex;
     flex: 1;
 }
-
-/*
-html,
-body,
-#root
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: ivory;
-}
-
-html, body, #root, canvas {
-  margin: 0;
-  padding: 0;
-}*/
