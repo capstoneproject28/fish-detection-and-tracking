@@ -9,7 +9,7 @@
 /frontend/README.md
 /FishDetectorReact/yarn.lock
 
-/fish-detectionfrontend/node_modules
+/FishDetectorFrontend/node_modules/
 
 env/
 *.pyc
