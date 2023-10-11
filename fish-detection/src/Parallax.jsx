@@ -48,6 +48,7 @@ export default function Parallax(){
       <section>
         <div className="bg" style={{ backgroundImage: `url(${image2})` }} />
         <h2>Why AquaVision?</h2>
+        <br /><br />
                 <p>With state-of-the-art machine learning, AquaVision provides unparalleled accuracy in tracking and detecting fish in any environment.</p>
                 <p>We offer solutions that are perfect for researchers, fish farmers, and aquarists. Our easy-to-use interface is designed to help you get the most out of your aquatic observations.</p>
       </section>
@@ -55,6 +56,7 @@ export default function Parallax(){
         <div className="bg" style={{ backgroundImage: `url(${image3})` }} />
         <h2>How It Works</h2>
             <p>Simply upload your video and our AI algorithms will handle the rest. Receive comprehensive analytics about fish behavior, count, and movement patterns.</p>
+            <br /><br /> <br /><br />
             <h3>Real-time Analysis</h3>
               <p>Get instant data on fish movement and numbers.</p>
               <h3>User Friendly</h3>
