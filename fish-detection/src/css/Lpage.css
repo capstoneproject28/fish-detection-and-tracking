@@ -12,8 +12,12 @@ body {
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.Navbar {
+    flex: 0 0 240px;
+    height: 100vh;
+  }
 
 .App-header {
     text-align: center;
@@ -33,19 +37,11 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0077B6;
-    color: #fff;
-    border-radius: 5px;
-    position: relative; /* Change this line */
-    /* Remove bottom and left properties */
-    width: 100%;
-    z-index: 1000;
-}
-
 .App-features {
     margin-bottom: 50px; /* Adjust this value based on your needs */
 }
 
+.main-container {
+    display: flex;
+    min-height: 100vh; /* Ensure it covers full height */
+  }

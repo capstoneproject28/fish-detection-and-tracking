@@ -21,8 +21,8 @@ export default function Main() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<App />} />
-				<Route path="/login" element={<SignInSignUp />} />
+				<Route path="/App" element={<App />} />
+				<Route path="/" element={<SignInSignUp />} />
 				<Route path="/mlalgo" element={<Mlalgo />} />
 				<Route path="/lpage" element={<Lpage />} />
 				<Route path="/history" element={<History />} />
