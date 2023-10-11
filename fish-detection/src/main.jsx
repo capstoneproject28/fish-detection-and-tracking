@@ -11,6 +11,7 @@ const Analytics = React.lazy(() => import('./AnalyticsScreen.jsx'));
 const Lpage = React.lazy(() => import('./Lpage.jsx'));
 const Mlalgo = React.lazy(() => import('./Mlalgo.jsx'));
 const App = React.lazy(() => import('./App.jsx'));
+const Parallax = React.lazy(() => import('./Parallax.jsx'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -21,8 +22,9 @@ export default function Main() {
 	return (
 		<BrowserRouter>
 			<Routes>
+				<Route path="/" element={<Parallax />} />
 				<Route path="/App" element={<App />} />
-				<Route path="/" element={<SignInSignUp />} />
+				<Route path="/Signup" element={<SignInSignUp />} />
 				<Route path="/mlalgo" element={<Mlalgo />} />
 				<Route path="/lpage" element={<Lpage />} />
 				<Route path="/history" element={<History />} />

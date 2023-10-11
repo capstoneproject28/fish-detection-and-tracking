@@ -9,13 +9,14 @@ export default function Fpage(){
     )
 }
 
+/*
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Canvas } from '@react-three/fiber';
 import Experience from './Experience';
 import './App.css'
 
-export default function App() {
+/*export default function App() {
     const [scrollY, setScrollY] = useState(0);
 
     const handleScroll = (event) => {
@@ -103,7 +104,7 @@ import { Text } from '@react-three/drei';
     );
 }
 */
-
+/*
 export default function Experience({ scrollY }) {
     return (
         <>
