@@ -23,11 +23,11 @@ export default function Main() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/home" element={<Parallax />} />
-				<Route path="/app" element={<App />} />
+				<Route path="/" element={<App />} />
 				<Route path="/sign" element={<SignInSignUp />} />
 				<Route path="/mlalgo" element={<Mlalgo />} />
 				<Route path="/lpage" element={<Lpage />} />
-				<Route path="/" element={<History />} />
+				<Route path="/history" element={<History />} />
 				<Route path="/upload" element={<Upload />} />
 				<Route path="/analytics" element={<Analytics />} />
 			</Routes>
