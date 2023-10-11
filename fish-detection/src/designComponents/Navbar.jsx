@@ -33,12 +33,12 @@ export default function Navbar() {
 			href: 'example.com',
 			iconClass: 'fa-regular fa-lightbulb',
 			text: 'ML Algorithms',
-			count: 4
+			count: 'Tips'
 		},
 		{
 			href: 'example.com',
-			iconClass: 'fa-regular fa-circle-user',
-			text: 'User details',
+			iconClass: 'fa-solid fa-right-from-bracket',
+			text: 'Logout',
 		}
 	];
 

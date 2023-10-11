@@ -1,17 +1,41 @@
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.Navbar {
+  flex: 0 0 240px;
+  height: 100vh;
+}
+
+.content-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* stack the children (heading and grid) vertically */
+  align-items: center; /* center the children horizontally */
+}
+
+/* Center the main heading */
+h1 {
+  text-align: center;
+  margin: 20px 0; /* Add some vertical margin */
+  width: 100%; /* occupy full width */
+}
 
 .App-ml-algorithms {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates a 2-column grid layout */
-    grid-gap: 20px; /* Sets the gap between grid items */
-    padding: 2em;
-  }
-  
-  .algorithm {
-    margin: 1em 0;
-    padding: 1em;
-    background-color: #f3f3f3;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Makes it 2 columns */
+  grid-gap: 20px;
+  width: 100%; /* Ensures it takes the full width */
+  max-width: 1200px; /* Optional: you can limit the max-width for better aesthetics on wide screens */
+}
+
+.algorithm {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  text-align: center;
+}
