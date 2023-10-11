@@ -13,3 +13,5 @@
 
 env/
 *.pyc
+FishdetectorBackend/predictions
+FishdetectorBackend/uploads
