@@ -1,42 +1,60 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "../css/sidebar.css"
 
 export default function Navbar() {
 	const [isActive, setIsActive] = useState(true);
 
+	const [status, setStatus] = useState(false);
+
+    useEffect(() => {
+        let logged = localStorage.getItem('uid');
+        if (logged) {
+            setStatus(true);
+        } else {
+            setStatus(false);
+        }
+    }, [])
+
+    const logout = () => {
+        localStorage.clear();
+        window.location.href = '/';
+
+    }
+
 	const toggleSection = () => {
 		setIsActive(!isActive);
 	};
+
 	const navigationLinks = [
 		{
-			href: 'example.com',
+			href: '/home',
 			iconClass: 'fa-regular fa-building',
 			text: 'Home',
 			isActive: true,
 		},
 		{
-			href: 'example.com',
+			href: '/upload',
 			iconClass: 'fa-solid fa-cloud-arrow-up',
 			text: 'Upload',
 		},
 		{
-			href: 'example.com',
+			href: '/analytics',
 			iconClass: 'fa-regular fa-chart-bar',
 			text: 'Analytics',
 		},
 		{
-			href: 'example.com',
+			href: '/history',
 			iconClass: 'fa-solid fa-clock-rotate-left',
 			text: 'History',
 		},
 		{
-			href: 'example.com',
+			href: '/mlalgo',
 			iconClass: 'fa-regular fa-lightbulb',
 			text: 'ML Algorithms',
 			count: 'Tips'
 		},
 		{
-			href: 'example.com',
+			onClick: {logout},
 			iconClass: 'fa-solid fa-right-from-bracket',
 			text: 'Logout',
 		}

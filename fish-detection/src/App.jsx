@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import Experience from './Experience';
 import './App.css'
 import Carousel from './designComponents/Carousel';
+import SignInSignUp from './components/SignInSignUp';
 
 export default function App() {
     const [scrollY, setScrollY] = useState(0);
@@ -29,7 +30,7 @@ export default function App() {
             <div>
             <header className="App-header">
                 <h1>AquaVision</h1>
-                <p className="cta-text">Your friendly video image analysis for fish detection and tracking! Dive into a new world of aquatic analysis. <span><a href="/signup" className="signup-link">Sign up now</a> and make a splash!</span></p>
+                <p className="cta-text">Your friendly video image analysis for fish detection and tracking! Dive into a new world of aquatic analysis. <span><a href="/sign" className="signup-link">Sign up now</a> and make a splash!</span></p>
             </header>
             </div>
             <Canvas
