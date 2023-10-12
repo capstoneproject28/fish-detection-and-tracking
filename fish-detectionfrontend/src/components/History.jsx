@@ -3,8 +3,11 @@ import axios from 'axios'
 import '../css/main.css'
 import '../css/history.css'
 import Navbar from '../designComponents/Navbar.jsx';
-import Chart from "chart.js/auto";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Label } from 'recharts';
+
+//Charts
+import FishesPerFrame from '../charts/FishesPerFrame.jsx';
+import SpeciesCount from '../charts/UniqueFish.jsx';
+import FishCount from '../charts/FishCount.jsx';
 
 
 export default function History() {
@@ -26,9 +29,6 @@ export default function History() {
 		axios
 			.get(apiUrl)
 			.then((response) => {
-				console.log("heres the data");
-				console.log(response);
-				console.log("/data");
 
 				const processedData = response.data.videos.map((item) => {
 
@@ -41,9 +41,7 @@ export default function History() {
 						result_name: resultNameObject,
 					};
 				});
-				setVideoLinks(processedData);
-
-				console.log(processedData);
+				setVideoLinks(processedData.reverse());
 
 				setAnalyticsVisible(new Array(processedData.length).fill(false));
 			})
@@ -68,7 +66,7 @@ export default function History() {
 						<h1>Recent Uploads</h1>
 						{videoLinks.map((video, index) => (
 							
-						<div className = "historyEntry" >
+						<div className="historyEntry">
 							<div className="historyEntryTopSection">
 								<div className="historyVideoSection">
 									<video src={video.url} className="videoEntry" controls preload="auto"></video>
@@ -79,13 +77,18 @@ export default function History() {
 								</div>
 							</div>
 							<div className={analyticsVisible[index] ? 'historyEntryBottomSection' : 'historyEntryBottomSection hidden'}>
-								<BarChart width={600} height={300} data={chartData}>
-									<CartesianGrid strokeDasharray="3 3" />
-									<XAxis dataKey="species" label={{ value: 'Species', position: 'insideBottom', offset: 0 }} />
-									<YAxis label={{ value: 'Count', angle: -90, position: 'insideLeft', offset: 10 }} />
-									<Tooltip />
-									<Bar dataKey="count" fill="#8884d8" />
-								</BarChart>
+								<h1>Fish Per Frame</h1>
+								<div className="graphDiv">
+									{FishesPerFrame(videoLinks[index].result_name)}
+								</div>
+								<h1>Unique Fish Species</h1>
+								<div className="graphDiv">
+									{SpeciesCount(videoLinks[index].result_name)}
+								</div>
+								<h1>Species Count</h1>
+								<div className="graphDiv">
+									{FishCount(videoLinks[index].result_name)}
+								</div>
 							</div>
 						</div>
 						))}
