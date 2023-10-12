@@ -9,6 +9,8 @@ const History = React.lazy(() => import('./components/History.jsx'));
 const Upload = React.lazy(() => import('./components/Upload.jsx'));
 const Analytics = React.lazy(() => import('./AnalyticsScreen.jsx'));
 
+//Authentication
+const Authentication = React.lazy(() => import('./components/Authentication.jsx'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -17,6 +19,7 @@ root.render(
 );
 
 export default function Main() {
+
 	return (
 		<BrowserRouter>
 			<Routes>

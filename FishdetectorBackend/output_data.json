@@ -1,0 +1,454 @@
+{
+    "overview": {
+        "total_species": 3,
+        "total_fish": 32,
+        "avg_confidence": 0.44928003125
+    },
+    "frames": [
+        {
+            "frame": "1697079191_test12345_1",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.791147,
+                        0.0391633,
+                        0.0339514,
+                        0.0783265
+                    ],
+                    "confidence": 0.130795
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_10",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.029244,
+                        0.511771,
+                        0.0577066,
+                        0.0721929
+                    ],
+                    "confidence": 0.655556
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_11",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.030898,
+                        0.508312,
+                        0.0588391,
+                        0.0677331
+                    ],
+                    "confidence": 0.644672
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_12",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0311362,
+                        0.501582,
+                        0.0605641,
+                        0.0599566
+                    ],
+                    "confidence": 0.731104
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_13",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0311817,
+                        0.498771,
+                        0.0608975,
+                        0.0590348
+                    ],
+                    "confidence": 0.747671
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_14",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.030439,
+                        0.49931,
+                        0.0600275,
+                        0.0567748
+                    ],
+                    "confidence": 0.710106
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_15",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0290198,
+                        0.50256,
+                        0.0580396,
+                        0.0587988
+                    ],
+                    "confidence": 0.69487
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_16",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0279671,
+                        0.509428,
+                        0.0559343,
+                        0.0666138
+                    ],
+                    "confidence": 0.62499
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_17",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0263126,
+                        0.515059,
+                        0.0526252,
+                        0.0715597
+                    ],
+                    "confidence": 0.341745
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_18",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0250338,
+                        0.517282,
+                        0.0500677,
+                        0.0685524
+                    ],
+                    "confidence": 0.700533
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_19",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0231502,
+                        0.522551,
+                        0.0460515,
+                        0.0786732
+                    ],
+                    "confidence": 0.178328
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_2",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0144781,
+                        0.533897,
+                        0.0287757,
+                        0.0974125
+                    ],
+                    "confidence": 0.322298
+                },
+                {
+                    "species": "Pomacentrus coelestis",
+                    "bounding_box": [
+                        0.590184,
+                        0.414364,
+                        0.0161823,
+                        0.0367757
+                    ],
+                    "confidence": 0.141677
+                },
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.794616,
+                        0.0426927,
+                        0.0331608,
+                        0.0838575
+                    ],
+                    "confidence": 0.1049
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_20",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0225047,
+                        0.523308,
+                        0.0444704,
+                        0.0721915
+                    ],
+                    "confidence": 0.451797
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_21",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0219567,
+                        0.527816,
+                        0.0434964,
+                        0.0752068
+                    ],
+                    "confidence": 0.273533
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_22",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0220504,
+                        0.529821,
+                        0.0437357,
+                        0.0764527
+                    ],
+                    "confidence": 0.137569
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_23",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.02244,
+                        0.530905,
+                        0.0441639,
+                        0.0751385
+                    ],
+                    "confidence": 0.223839
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_24",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0225912,
+                        0.52943,
+                        0.0441708,
+                        0.0726354
+                    ],
+                    "confidence": 0.238711
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_25",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0223062,
+                        0.528338,
+                        0.0437337,
+                        0.075145
+                    ],
+                    "confidence": 0.209166
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_3",
+            "fish": [
+                {
+                    "species": "Dascyllus aruanus",
+                    "bounding_box": [
+                        0.768621,
+                        0.365871,
+                        0.0290163,
+                        0.0813354
+                    ],
+                    "confidence": 0.521311
+                },
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0163789,
+                        0.524343,
+                        0.0323391,
+                        0.0743156
+                    ],
+                    "confidence": 0.48965
+                },
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0336359,
+                        0.226392,
+                        0.0669082,
+                        0.10642
+                    ],
+                    "confidence": 0.20866
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_4",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0189698,
+                        0.522681,
+                        0.0375625,
+                        0.0712562
+                    ],
+                    "confidence": 0.693011
+                },
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0390132,
+                        0.228935,
+                        0.0757585,
+                        0.0953863
+                    ],
+                    "confidence": 0.259261
+                },
+                {
+                    "species": "Dascyllus aruanus",
+                    "bounding_box": [
+                        0.77459,
+                        0.370272,
+                        0.0255697,
+                        0.0817318
+                    ],
+                    "confidence": 0.122712
+                },
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.765351,
+                        0.0407656,
+                        0.0435593,
+                        0.0789834
+                    ],
+                    "confidence": 0.104106
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_5",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0215513,
+                        0.521477,
+                        0.0426579,
+                        0.0737578
+                    ],
+                    "confidence": 0.679337
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_6",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0239325,
+                        0.518592,
+                        0.0473001,
+                        0.0709627
+                    ],
+                    "confidence": 0.734426
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_7",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0262854,
+                        0.515592,
+                        0.0515282,
+                        0.0668942
+                    ],
+                    "confidence": 0.772897
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_8",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0280968,
+                        0.514543,
+                        0.0549627,
+                        0.0691284
+                    ],
+                    "confidence": 0.760882
+                }
+            ]
+        },
+        {
+            "frame": "1697079191_test12345_9",
+            "fish": [
+                {
+                    "species": "Abudefduf sexfasciatus",
+                    "bounding_box": [
+                        0.0288057,
+                        0.511724,
+                        0.056644,
+                        0.0682198
+                    ],
+                    "confidence": 0.766848
+                }
+            ]
+        }
+    ]
+}
