@@ -16,24 +16,48 @@ const Authentication = React.lazy(() => import('./components/Authentication.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+import { useEffect } from 'react';
+import { Outlet, useNavigate } from "react-router-dom";
+
+function PrivateRoute() {
+  let navigate = useNavigate();
+  let isAuthenticated = localStorage.getItem('uid');
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    }
+  }, [isAuthenticated, navigate]);
+
+  if (!isAuthenticated) {
+    return null;
+  }
+
+  return <Outlet />;
+}
+
+
 root.render(
 	<Main />
 );
 
 export default function Main() {
-
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/home" element={<Parallax />} />
-				<Route path="/" element={<App />} />
-				<Route path="/login" element={<SignInSignUp />} />
-				<Route path="/mlalgo" element={<Mlalgo />} />
-				<Route path="/history" element={<History />} />
-				<Route path="/upload" element={<Upload />} />
-				<Route path="/analytics" element={<Analytics />} />
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<SignInSignUp />} />
+        <Route path="/" element={<App />} />
+        <Route path="/*" element={<PrivateRoute />}>
+          <Route path="home" element={<Parallax />} />
+          <Route path="mlalgo" element={<Mlalgo />} />
+          <Route path="history" element={<History />} />
+          <Route path="upload" element={<Upload />} />
+          <Route path="analytics" element={<Analytics />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
+
+
 
