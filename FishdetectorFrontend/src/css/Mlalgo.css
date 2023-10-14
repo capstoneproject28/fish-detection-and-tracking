@@ -24,26 +24,17 @@ body {
 }
 
 .content-container {
-  display: flex;
-  padding: 20px;
-  text-align: center;
+  flex-direction: column;
 }
 
 .content-body {
-  display: flex; /* Align the algorithm container and chart container side by side */
-  justify-content: space-between;
-  width: 100%;
-  align-items: start;
+  flex-direction: row;
 }
 
 .algorithm-container {
-  flex: 2; /* Give more space to the algorithm container */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  gap: 20px;
-  width: 50%; /* Adjusted width */
+  display: grid; /* Use grid display */
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  gap: 20px; 
 }
 
 .chart-container {
@@ -52,9 +43,11 @@ body {
   justify-content: center; /* Center the chart horizontally */
   width: 50%; /* Adjusted width */
   align-self: center;
+  margin: 0 auto;
 }
 
 h1 {
+  margin-top: 20px;
   text-align: center;
   margin-bottom: 40px;
   font-weight: 700;
@@ -70,12 +63,11 @@ h1 {
 }
 
 .algorithm {
+  width: 90%;
   padding: 20px;
   background-color: #f3f3f3;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 10px); /* Adjusted width for algorithms */
-  position: relative;
 }
 
 .algorithm:hover {
