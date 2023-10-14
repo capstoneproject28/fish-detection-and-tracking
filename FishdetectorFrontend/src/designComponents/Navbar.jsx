@@ -4,23 +4,11 @@ import "../css/sidebar.css"
 export default function Navbar() {
 	const [isActive, setIsActive] = useState(true);
 
-	const [status, setStatus] = useState(false);
+	const logout = () => {
+		localStorage.clear();
+		window.location.href = '/';
+	}
 
-    useEffect(() => {
-        let logged = localStorage.getItem('uid');
-        if (logged) {
-            setStatus(true);
-        } else {
-            setStatus(false);
-        }
-    }, [])
-
-    const logout = () => {
-        localStorage.clear();
-        window.location.href = '/';
-
-    }
-	
 	const toggleSection = () => {
 		setIsActive(!isActive);
 	};
@@ -54,7 +42,7 @@ export default function Navbar() {
 			count: 'Tips'
 		},
 		{
-			onClick: {logout},
+			onClick: logout,
 			iconClass: 'fa-solid fa-right-from-bracket',
 			text: 'Logout',
 		}
@@ -79,7 +67,11 @@ export default function Navbar() {
 					<ul>
 						{navigationLinks.map((link, index) => (
 							<li key={index}>
-								<a href={link.href} className={link.isActive ? 'active' : ''}>
+								<a 
+									href={link.href || '#'} 
+									className={link.isActive ? 'active' : ''}
+									onClick={link.onClick}
+								>
 									<span className="icon">
 										<i className={link.iconClass} />
 									</span>
