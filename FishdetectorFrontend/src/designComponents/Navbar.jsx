@@ -15,20 +15,9 @@ export default function Navbar() {
 
 	const navigationLinks = [
 		{
-			href: '/home',
-			iconClass: 'fa-regular fa-building',
-			text: 'Home',
-			isActive: true,
-		},
-		{
 			href: '/upload',
 			iconClass: 'fa-solid fa-cloud-arrow-up',
 			text: 'Upload',
-		},
-		{
-			href: '/analytics',
-			iconClass: 'fa-regular fa-chart-bar',
-			text: 'Analytics',
 		},
 		{
 			href: '/history',
@@ -38,7 +27,7 @@ export default function Navbar() {
 		{
 			href: '/mlalgo',
 			iconClass: 'fa-regular fa-lightbulb',
-			text: 'ML Algorithms',
+			text: 'Algorithms',
 			count: 'Tips'
 		},
 		{
@@ -83,8 +72,6 @@ export default function Navbar() {
 					</ul>
 				</div>
 			</section>
-
-
 		</>
 	)
 }

@@ -7,9 +7,7 @@ import ReactDOM from 'react-dom/client'
 const SignInSignUp = React.lazy(() => import('./components/SignInSignUp.jsx'));
 const History = React.lazy(() => import('./components/History.jsx'));
 const Upload = React.lazy(() => import('./components/Upload.jsx'));
-const Analytics = React.lazy(() => import('./AnalyticsScreen.jsx'));
 const Mlalgo = React.lazy(() => import('./Mlalgo.jsx'));
-const App = React.lazy(() => import('./App.jsx'));
 const Parallax = React.lazy(() => import('./Parallax.jsx'));
 //Authentication
 const Authentication = React.lazy(() => import('./components/Authentication.jsx'));
@@ -46,18 +44,15 @@ export default function Main() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<SignInSignUp />} />
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Parallax />} />
         <Route path="/*" element={<PrivateRoute />}>
-          <Route path="home" element={<Parallax />} />
           <Route path="mlalgo" element={<Mlalgo />} />
           <Route path="history" element={<History />} />
           <Route path="upload" element={<Upload />} />
-          <Route path="analytics" element={<Analytics />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
 
 
