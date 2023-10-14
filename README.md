@@ -66,7 +66,7 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 - Josh McEvoy
 - Rohan Soni
 - Adnan Zafar (103169535)
-- Luke Valentino
+- Luke Valentino (103024456)
 - Hammad Ahmed
 
 ## License
