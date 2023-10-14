@@ -4,9 +4,9 @@ import "../css/sidebar.css"
 export default function Navbar() {
 	const [isActive, setIsActive] = useState(true);
 
-	const [status, setStatus] = useState(false);
+	//const [status, setStatus] = useState(false);
 
-    useEffect(() => {
+    /*useEffect(() => {
         let logged = localStorage.getItem('uid');
         if (logged) {
             setStatus(true);
@@ -20,7 +20,7 @@ export default function Navbar() {
         window.location.href = '/';
 
     }
-	
+	*/
 	const toggleSection = () => {
 		setIsActive(!isActive);
 	};
@@ -54,7 +54,7 @@ export default function Navbar() {
 			count: 'Tips'
 		},
 		{
-			onClick: {logout},
+			href: '',
 			iconClass: 'fa-solid fa-right-from-bracket',
 			text: 'Logout',
 		}

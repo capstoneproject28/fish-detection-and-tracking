@@ -56,7 +56,7 @@ export default function Parallax(){
         <div className="bg" style={{ backgroundImage: `url(${image3})` }} />
         <h2>How It Works</h2>
             <p>Simply upload your video and our AI algorithms will handle the rest. Receive comprehensive analytics about fish behavior, count, and movement patterns.</p>
-            <br /><br /> <br /><br />
+            <br />
             <h3>Real-time Analysis</h3>
               <p>Get instant data on fish movement and numbers.</p>
               <h3>User Friendly</h3>
