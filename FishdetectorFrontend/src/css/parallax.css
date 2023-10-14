@@ -1,5 +1,5 @@
 html {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
@@ -40,23 +40,23 @@ h1, h2, h3, p {  /* Common properties for h1, h2, h3, and p */
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3.8em;
     font-weight: 400;
     margin-top: 0;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2.8em;
     font-weight: 400;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 400;
 }
 
 p {
     margin-top: 2%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 100;
 }

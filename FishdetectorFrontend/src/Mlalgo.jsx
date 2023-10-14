@@ -32,13 +32,13 @@ export default function Mlalgo(){
                       </div>
                         <p className="accuracy-text">89% Accuracy</p>
                         <div className="speed-container">
-                          <div className="speed-bar" style={{ width: '89%' }}></div>
+                          <div className="speed-bar" style={{ width: '95%' }}></div>
                       </div>
-                        <p className="accuracy-text">89% Speed</p>
+                        <p className="accuracy-text">95% Speed</p>
                     </section>
               
                     <section className="algorithm" id="cnn">
-                      <h3>CNN (Convolutional Neural Networks)</h3>
+                      <h3>CNN (Convolutional Neural Networks) - In Development</h3>
                       <br/>
                       <p>
                         CNNs are primarily used for image classification tasks and are highly effective in understanding the spatial hierarchies in images. They provide a good balance between accuracy and speed.
@@ -48,9 +48,9 @@ export default function Mlalgo(){
                       </div>
                         <p className="accuracy-text">67% Accuracy</p>
                         <div className="speed-container">
-                          <div className="speed-bar" style={{ width: '89%' }}></div>
+                          <div className="speed-bar" style={{ width: '75%' }}></div>
                       </div>
-                        <p className="accuracy-text">89% Speed</p>
+                        <p className="accuracy-text">75% Speed</p>
                     </section>
               
                     <section className="algorithm" id="rnn">
@@ -64,9 +64,9 @@ export default function Mlalgo(){
                       </div>
                         <p className="accuracy-text">70% Accuracy</p>
                         <div className="speed-container">
-                          <div className="speed-bar" style={{ width: '89%' }}></div>
+                          <div className="speed-bar" style={{ width: '80%' }}></div>
                       </div>
-                        <p className="accuracy-text">89% Speed</p>
+                        <p className="accuracy-text">80% Speed</p>
                     </section>
               
                     <section className="algorithm" id="rcnn">
@@ -80,15 +80,15 @@ export default function Mlalgo(){
                       </div>
                         <p className="accuracy-text">48% Accuracy</p>
                         <div className="speed-container">
-                          <div className="speed-bar" style={{ width: '89%' }}></div>
+                          <div className="speed-bar" style={{ width: '50%' }}></div>
                       </div>
-                        <p className="accuracy-text">89% Speed</p>
+                        <p className="accuracy-text">50% Speed</p>
                     </section>
                     </div>
                 </div>
                 <div className="chart-container">
                   <div style={{ margin: "40px 0" }}>
-                    <BarChart width={900} height={400} data={data}>
+                    <BarChart width={500} height={300} data={data}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="name" />
                       <YAxis />
