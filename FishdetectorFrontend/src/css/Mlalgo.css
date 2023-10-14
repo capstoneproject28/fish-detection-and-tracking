@@ -1,17 +1,126 @@
+/* Add a font from Google Fonts for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for the modern look */
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.main-container {
+  display: flex;
+  min-height: 100vh; /* Ensure it covers full height */
+}
+
+.Navbar {
+  flex: 0 0 240px;
+  height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+}
+
+.content-body {
+  display: flex; /* Align the algorithm container and chart container side by side */
+  justify-content: space-between;
+  width: 100%;
+  align-items: start;
+}
+
+.algorithm-container {
+  flex: 2; /* Give more space to the algorithm container */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  gap: 20px;
+  width: 50%; /* Adjusted width */
+}
+
+.chart-container {
+  flex: 1; /* Give less space to the chart container */
+  display: flex;
+  justify-content: center; /* Center the chart horizontally */
+  width: 50%; /* Adjusted width */
+  align-self: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
+}
 
 .App-ml-algorithms {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates a 2-column grid layout */
-    grid-gap: 20px; /* Sets the gap between grid items */
-    padding: 2em;
-  }
-  
-  .algorithm {
-    margin: 1em 0;
-    padding: 1em;
-    background-color: #f3f3f3;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.algorithm {
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px); /* Adjusted width for algorithms */
+  position: relative;
+}
+
+.algorithm:hover {
+  transform: scale(1.12); /* Slight scale on hover for effect */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #777;
+  line-height: 1.5;
+}
+
+.accuracy-container {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd; /* Light gray background for the unfilled part of the bar */
+  border-radius: 10px;
+  margin-top: 10px; 
+}
+
+.accuracy-bar {
+  height: 100%;
+  background-color: #4CAF50; /* Green color for the filled part of the bar */
+  border-radius: 10px;
+}
+
+.accuracy-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.speed-container {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd; /* Light gray background for the unfilled part of the bar */
+  border-radius: 10px;
+  margin-top: 10px; 
+}
+.speed-bar {
+  height: 100%;
+  background-color: rgb(189, 189, 24); /* Green color for the filled part of the bar */
+  border-radius: 10px;
+}
