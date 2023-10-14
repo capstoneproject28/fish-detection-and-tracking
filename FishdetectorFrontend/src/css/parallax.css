@@ -1,0 +1,62 @@
+html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+  
+body {
+    margin: 0;
+    background: #3b4151;
+    font-family: "Euclid Circular A", "Poppins";
+}
+  
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Added to make contents flow vertically */
+    justify-content: center;
+    text-align: center;  /* Added to center text */
+}
+  
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.68);
+}
+  
+h1, h2, h3, p {  /* Common properties for h1, h2, h3, and p */
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+p {
+    margin-top: 2%;
+    font-size: 1.5em;
+    font-weight: 100;
+}

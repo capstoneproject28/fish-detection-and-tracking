@@ -4,12 +4,30 @@ import "../css/sidebar.css"
 export default function Navbar() {
 	const [isActive, setIsActive] = useState(true);
 
+	const [status, setStatus] = useState(false);
+
+    useEffect(() => {
+        let logged = localStorage.getItem('uid');
+        if (logged) {
+            setStatus(true);
+        } else {
+            setStatus(false);
+        }
+    }, [])
+
+    const logout = () => {
+        localStorage.clear();
+        window.location.href = '/';
+
+    }
+	
 	const toggleSection = () => {
 		setIsActive(!isActive);
 	};
+
 	const navigationLinks = [
 		{
-			href: '/',
+			href: '/home',
 			iconClass: 'fa-regular fa-building',
 			text: 'Home',
 			isActive: true,
@@ -20,20 +38,25 @@ export default function Navbar() {
 			text: 'Upload',
 		},
 		{
+			href: '/analytics',
+			iconClass: 'fa-regular fa-chart-bar',
+			text: 'Analytics',
+		},
+		{
 			href: '/history',
 			iconClass: 'fa-solid fa-clock-rotate-left',
 			text: 'History',
 		},
 		{
-			href: '/algorithms',
+			href: '/mlalgo',
 			iconClass: 'fa-regular fa-lightbulb',
 			text: 'ML Algorithms',
-			count: 4
+			count: 'Tips'
 		},
 		{
-			href: 'example.com',
-			iconClass: 'fa-regular fa-circle-user',
-			text: 'User details',
+			onClick: {logout},
+			iconClass: 'fa-solid fa-right-from-bracket',
+			text: 'Logout',
 		}
 	];
 

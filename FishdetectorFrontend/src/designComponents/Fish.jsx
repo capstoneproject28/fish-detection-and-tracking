@@ -23,7 +23,7 @@ export default function Fish() {
         <>
             <primitive
                 object={fish.scene}
-                scale={0.05}
+                scale={0.168}
                 position={[0, 0, 0]}
             />
         </>

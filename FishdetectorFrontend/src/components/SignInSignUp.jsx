@@ -77,7 +77,7 @@ export default function SignInSignUp() {
 		<>
 			<div className="cont">
 				<div className="form sign-in">
-					<img className="logo" src="../src/assets/logo/fullLogoBlue.png"></img>
+					<img className="logo" src="../src/assets/LogoTop.png"></img>
 					<label>
 						<span>Username</span>
 						<input type="email" onChange={(e) => { setsUsername(e.target.value) }} />
@@ -106,7 +106,7 @@ export default function SignInSignUp() {
 						</div>
 					</div>
 					<div className="form sign-up">
-						<img className="logo" src="../src/assets/logo/fullLogoBlue.png"></img>
+						<img className="logo" src="../src/assets/LogoTop.png"></img>
 						<label>
 							<span>Username</span>
 							<input type="text" onChange={(e) => { setrUsername(e.target.value) }} />
