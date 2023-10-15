@@ -11,6 +11,10 @@ body {
 	background: #ededed;
 }
 
+body, html {
+    overflow: hidden;
+}
+
 input,
 button {
 	border: none;
@@ -29,10 +33,12 @@ button {
 	overflow: hidden;
 	position: relative;
 	width: 900px;
-	height: 100vh;
+	height: 700px;
 	margin: 0 auto 100px;
+	margin-top: 40px;
 	background: #fff;
 	filter: drop-shadow(0px 0px 16px #afafaf);
+	border-radius: 15px;
 }
 
 .form {
