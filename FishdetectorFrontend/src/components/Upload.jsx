@@ -47,7 +47,7 @@ function Upload() {
 			.post("http://127.0.0.1:8000/api/detect/", fd)
 			.then(() => {
 				// Add navigation logic here if you have a routing mechanism
-				// navigation.navigate("/history");
+				navigation.navigate("/history");
 			})
 			.catch((error) => {
 				console.error("Error posting file path:", error);

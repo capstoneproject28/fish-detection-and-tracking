@@ -69,7 +69,7 @@ export default function SignInSignUp() {
 					console.log(token.token);
 					if (token !== undefined || null) {
 						//Navigate to the Detection Page
-						navigation.navigate("/history");
+						navigation.navigate("/upload");
 						//window.location.reload();
 
 					}
