@@ -255,6 +255,12 @@ input {
 	align-items: center;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin: 10px 0;
+}
+
 .cont.s--signup .sign-in {
 	transition-timing-function: ease-in-out;
 	transition-duration: 1.2s;

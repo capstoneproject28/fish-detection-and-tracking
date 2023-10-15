@@ -5,12 +5,20 @@ import "../css/signup.css"
 export default function SignInSignUp() {
 	//signin to signup animation transition
 	useEffect(() => {
-		document.querySelector('.img__btn').addEventListener('click', function () {
+		const toggleButton = document.querySelector('.img__btn');
+		toggleButton.addEventListener('click', function () {
 			document.querySelector('.cont').classList.toggle('s--signup');
+			setErrorMessage(""); // Clear the error message when toggling
 		});
-	}, []);
+	
+		// Make sure to cleanup (remove) the event listener on component unmount
+		return () => {
+			toggleButton.removeEventListener('click');
+		}
+	}, []);	
 
 	//register function
+	const [errorMessage, setErrorMessage] = useState("");
 	const [rusername, setrUsername] = useState("");
 	const [remail, setrEmail] = useState("");
 	const [rpass, setrPass] = useState("");
@@ -37,6 +45,7 @@ export default function SignInSignUp() {
 			})
 			.catch((error) => {
 				console.error("Error registering: ", error);
+				setErrorMessage("Error during registration. Please try again.");
 			});
 	}
 
@@ -67,6 +76,7 @@ export default function SignInSignUp() {
 				})
 				.catch((err) => {
 					console.log("There was a: ", err);
+					setErrorMessage("Invalid username or password.");
 				});
 			setsName("");
 			setsPass("");
@@ -80,12 +90,13 @@ export default function SignInSignUp() {
 					<img className="logo" src="../src/assets/LogoTop.png"></img>
 					<label>
 						<span>Username</span>
-						<input type="email" onChange={(e) => { setsUsername(e.target.value) }} />
+						<input type="email" onChange={(e) => { setsUsername(e.target.value); setErrorMessage(""); }} />
 					</label>
 					<label>
 						<span>Password</span>
-						<input type="password" onChange={(e) => { setsPass(e.target.value) }} />
+						<input type="password" onChange={(e) => { setsPass(e.target.value); setErrorMessage(""); }} />
 					</label>
+					{errorMessage && <p className="error-message">{errorMessage}</p>}
 					<button type="button" className="submit" onClick={SignIn}>
 						Sign In
 					</button>
@@ -109,20 +120,21 @@ export default function SignInSignUp() {
 						<img className="logo" src="../src/assets/LogoTop.png"></img>
 						<label>
 							<span>Username</span>
-							<input type="text" onChange={(e) => { setrUsername(e.target.value) }} />
+							<input type="text" onChange={(e) => { setrUsername(e.target.value); setErrorMessage(""); }} />
 						</label>
 						<label>
 							<span>Email</span>
-							<input type="email" onChange={(e) => { setrEmail(e.target.value) }} />
+							<input type="email" onChange={(e) => { setrEmail(e.target.value); setErrorMessage(""); }} />
 						</label>
 						<label>
 							<span>Password</span>
-							<input type="password" onChange={(e) => { setrPass(e.target.value) }} />
+							<input type="password" onChange={(e) => { setrPass(e.target.value); setErrorMessage(""); }} />
 						</label>
 						<label>
 							<span>Re-enter Password</span>
-							<input type="password" onChange={(e) => { setrPass2(e.target.value) }} />
+							<input type="password" onChange={(e) => { setrPass2(e.target.value); setErrorMessage(""); }} />
 						</label>
+						{errorMessage && <p className="error-message">{errorMessage}</p>}
 						<button type="button" className="submit" onClick={Register}>
 							Sign Up
 						</button>
