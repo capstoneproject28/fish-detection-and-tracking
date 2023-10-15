@@ -2,15 +2,23 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import "./css/parallax.css";
-
+import CanvasComponent from './components/CanvasComponent';  // Ensure the path is correct based on your folder structure
+import Carousel from './designComponents/Carousel';
 import image1 from "./assets/1.jpg";
 import image2 from "./assets/2.jpg";
 import image3 from "./assets/3.jpeg";
+import image4 from "./assets/water1.jpg"
+import { useNavigate } from "react-router-dom";
 
 export default function Parallax(){
   const { innerHeight } = window;
-
   const getRatio = (el) => innerHeight / (innerHeight + el.offsetHeight);
+  const navigate = useNavigate();
+
+  // Redirect function
+  const redirectToSignup = () => {
+    navigate("/login");  // Redirect to /login
+  }
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -44,6 +52,12 @@ export default function Parallax(){
       <div className="bg" style={{ backgroundImage: `url(${image1})` }} />
         <h1>Welcome to AquaVision</h1>
         <p>Your friendly video image analysis for fish detection and tracking!</p>
+        <a href="/login" className="login-btn">Login / Signup</a>
+      </section>
+      <section className="canvas">
+        <div className="bg" style={{ backgroundImage: `url(${image4})` }} />
+        <CanvasComponent />
+        <Carousel />
       </section>
       <section>
         <div className="bg" style={{ backgroundImage: `url(${image2})` }} />

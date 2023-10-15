@@ -20,6 +20,10 @@
 	margin: 10px;
 }
 
+.uploadBox h1 {
+    margin-bottom: 30px; 
+}
+
 .button {
 	background-color: #687DDB;
 	padding: 20px;

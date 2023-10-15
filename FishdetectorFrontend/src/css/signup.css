@@ -79,6 +79,10 @@ button {
 	width: 260px;
 	height: 100%;
 	padding-top: 360px;
+	display: flex;
+    flex-direction: column; /* To ensure its children (text and button) stack vertically */
+    align-items: center; /* To center its children horizontally */
+    justify-content: center; 
 	
 }
 
@@ -118,6 +122,11 @@ button {
 	text-align: center;
 	color: #fff;
 	transition: transform 1.2s ease-in-out;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
 }
 
 .img__text h2 {
