@@ -64,37 +64,40 @@ export default function History() {
 				<div className="mainContent">
 					<div className="historyList">
 						<h1>Recent Uploads</h1>
-						{videoLinks.map((video, index) => (
-							
-						<div className="historyEntry">
-							<div className="historyEntryTopSection">
-								<div className="historyVideoSection">
-									<video src={video.url} className="videoEntry" controls preload="auto"></video>
+						{videoLinks.length === 0 ? (
+							<p style={{ marginLeft: "1.8%" }}>No videos analysed yet.</p>
+						) : (
+							videoLinks.map((video, index) => (
+								<div className="historyEntry">
+									<div className="historyEntryTopSection">
+										<div className="historyVideoSection">
+											<video src={video.url} className="videoEntry" controls preload="auto"></video>
+										</div>
+										<div className="historyInfoSection">
+											<h2>{video.filename}</h2>
+											<h3 className="viewAnalyticsText" id={"analyticsButton." + index} onClick={() => viewAnalytics(index)}>View analytics</h3>
+										</div>
+									</div>
+									<div className={analyticsVisible[index] ? 'historyEntryBottomSection' : 'historyEntryBottomSection hidden'}>
+										<h1>Fish Per Frame</h1>
+										<div className="graphDiv">
+											{FishesPerFrame(videoLinks[index].result_name)}
+										</div>
+										<h1>Unique Fish Species</h1>
+										<div className="graphDiv">
+											{SpeciesCount(videoLinks[index].result_name)}
+										</div>
+										<h1>Species Count</h1>
+										<div className="graphDiv">
+											{FishCount(videoLinks[index].result_name)}
+										</div>
+									</div>
 								</div>
-								<div className="historyInfoSection">
-									<h2>{video.filename}</h2>
-									<h3 className="viewAnalyticsText" id={"analyticsButton." + index} onClick={() => viewAnalytics(index)}>View analytics</h3>
-								</div>
-							</div>
-							<div className={analyticsVisible[index] ? 'historyEntryBottomSection' : 'historyEntryBottomSection hidden'}>
-								<h1>Fish Per Frame</h1>
-								<div className="graphDiv">
-									{FishesPerFrame(videoLinks[index].result_name)}
-								</div>
-								<h1>Unique Fish Species</h1>
-								<div className="graphDiv">
-									{SpeciesCount(videoLinks[index].result_name)}
-								</div>
-								<h1>Species Count</h1>
-								<div className="graphDiv">
-									{FishCount(videoLinks[index].result_name)}
-								</div>
-							</div>
-						</div>
-						))}
+							))
+						)}
+					</div>
 				</div>
-			</div>
-		</div >
+			</div >
 		</>
 	);
 }
