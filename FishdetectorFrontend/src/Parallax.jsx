@@ -50,7 +50,7 @@ export default function Parallax(){
     <>
       <section>
       <div className="bg" style={{ backgroundImage: `url(${image1})` }} />
-        <h1>Welcome to AquaVision</h1>
+        <h1 className="typewriter-text">Welcome to AquaVision</h1>
         <p>Your friendly video image analysis for fish detection and tracking!</p>
         <a href="/login" className="login-btn">Login / Signup</a>
       </section>

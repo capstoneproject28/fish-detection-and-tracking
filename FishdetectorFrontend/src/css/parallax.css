@@ -1,3 +1,33 @@
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  
+  .typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid rgba(255, 255, 255, 0.75); /* The typewriter cursor */
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation:
+      typewriter 4s steps(40, end),
+      blinkTextCursor .75s step-end infinite;
+  }
+  
+  
 html {
     overflow-y: auto;
     height: 100%;
