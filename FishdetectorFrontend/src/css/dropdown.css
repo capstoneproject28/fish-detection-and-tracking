@@ -23,28 +23,8 @@
 }
 :root *::-webkit-scrollbar-thumb {
   border-radius: 99px;
-  background-color: var(--c-blue-200);
-  border: 4px solid var(--c-blue-700);
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.5;
-  min-height: 100vh;
-  font-size: 1.125rem;
   background-color: var(--c-blue-100);
-  color: var(--c-blue-100);
-  font-weight: 500;
-  overflow: hidden;
-}
-
-div {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  max-width: 400px;
-  width: 90%;
+  border: 4px solid var(--c-blue-100);
 }
 
 legend {
@@ -61,20 +41,22 @@ details {
   position: relative;
 }
 details summary {
-  background-color: var(--c-blue-700);
-  border: 2px solid var(--c-blue-300);
-  padding: 1rem;
+  background-color: var(--c-blue-100);
+  border: 2px solid var(--c-blue-100);
+  padding: 1em;
   position: relative;
   border-radius: 8px;
   padding-right: 3rem;
   cursor: pointer;
   list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--c-blue-200);
 }
 details summary::-webkit-details-marker {
   display: none;
 }
 details summary:hover, details summary:focus {
-  border-color: var(--c-blue-500);
+  border-color: var(--c-blue-100);
 }
 details summary i {
   position: absolute;
@@ -82,18 +64,20 @@ details summary i {
   right: 0.75rem;
   transform: translateY(-50%);
   transform-origin: center center;
+  transition: transform 1.2s ease;
 }
 details[open] summary {
-  border-color: var(--c-blue-500);
+  border-color: var(--c-blue-100);
 }
 details[open] summary i {
   color: var(--c-blue-500);
   transform: scaleY(-1) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
 }
 details > div {
   margin-top: 8px;
-  background-color: var(--c-blue-700);
-  border: 2px solid var(--c-blue-300);
+  background-color: var(--c-blue-100);
+  border: 2px solid var(--c-blue-100);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -114,10 +98,12 @@ details > div input {
   position: absolute;
 }
 details > div input:checked + span {
-  background-color: var(--c-blue-500);
+  background-color: var(--c-blue-200);
+  color: var(--c-blue-100);
 }
 details > div span:hover {
-  background-color: var(--c-blue-800);
+  background-color: var(--c-blue-200);
+  color: var(--c-blue-100);
 }
 details > div span {
   display: block;
@@ -133,7 +119,7 @@ details[open]:after {
   width: calc(100% - 36px);
   height: 50px;
   flex-shrink: 0;
-  background-image: linear-gradient(to top, var(--c-blue-700), transparent);
+  background-image: linear-gradient(to top, var(--c-blue-100), transparent);
   border-radius: 8px;
   pointer-events: none;
   right: 18px;
