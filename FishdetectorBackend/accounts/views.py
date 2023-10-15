@@ -76,7 +76,10 @@ def predict(request):
     if request.method == "POST":
         name = request.data.get('username')
         print("username is this ", name)
-        file_path, filename = handle_uploaded_file(request.FILES['file'])
+        try:
+            file_path, filename = handle_uploaded_file(request.FILES['file'])
+        except ValueError as e:
+            return JsonResponse({"error": str(e)}, status=400)  # Return the error message and a 400 Bad Request status
 
         new_filename = f"{name}_{filename}"
 

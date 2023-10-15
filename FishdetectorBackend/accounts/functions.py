@@ -8,9 +8,14 @@ import json
 cred = credentials.Certificate("./serviceAccountKey.json")
 firebase_admin.initialize_app(
     cred, {"storageBucket": "project28-f22ba.appspot.com"})
+ALLOWED_VIDEO_EXTENSIONS = set(['mp4', 'avi', 'mov', 'flv', 'wmv'])
 
+def allowed_video_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_VIDEO_EXTENSIONS
 
 def handle_uploaded_file(f):
+    if not allowed_video_file(f.name):
+        raise ValueError("Invalid video file format")
     upload_dir = './upload/'
     os.makedirs(upload_dir, exist_ok=True)
 
