@@ -16,6 +16,12 @@
 	margin-top: 40px;
 }
 
+.errorMsg {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
 .spinner {
 	margin: 20px auto;
 	width: 40px;
