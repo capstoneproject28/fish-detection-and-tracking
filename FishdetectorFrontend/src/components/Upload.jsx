@@ -1,8 +1,9 @@
-import { useState } from 'react'
 import axios from 'axios'
 import '../css/main.css'
 import '../css/upload.css'
 import Navbar from '../designComponents/Navbar.jsx';
+import { useState, useEffect } from 'react';
+
 
 function Upload() {
 
@@ -13,6 +14,22 @@ function Upload() {
 	const [video, setVideo] = useState();
 
 	const [uploading, setUploading] = useState(false);
+	const [loadingText, setLoadingText] = useState('Uploading...');
+
+	useEffect(() => {
+		if (uploading && !progress.started) {
+			const messages = ['Uploading...', 'Video is being analyzed...', 'This may take a while...'];
+			let index = 0;
+			const interval = setInterval(() => {
+				index = (index + 1) % messages.length;
+				setLoadingText(messages[index]);
+			}, 10000); // Change every 2 seconds
+
+			// Cleanup to clear the interval when component is unmounted or condition changes
+			return () => clearInterval(interval);
+		}
+	}, [uploading, progress.started]);
+
 
 	async function handleUpload() {
 		if (!file) {
@@ -53,8 +70,9 @@ function Upload() {
 
 						{progress.started && <progress max="100" value={progress.pc}></progress>}
 					</div>
-					<div className={uploading ? '' : 'hidden'}>
-						Uploading
+					<div className={uploading && !progress.started ? '' : 'hidden'}>
+						<div className='spinner'></div>
+						<p>{loadingText}</p>
 					</div>
 				</div>
 			</div>
