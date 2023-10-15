@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/dropdown.css'
+import 'font-awesome/css/font-awesome.min.css';
 
 export default function DropDown () {
   return (
@@ -8,8 +9,8 @@ export default function DropDown () {
   <legend>Dropdown</legend>
   <details open="">
     <summary>
-      Select your Machine learning algorithm...
-      <i className="ph-caret-down-bold" />
+      Select your Machine Learning Algorithm 
+      <i className="fa fa-caret-down" aria-hidden="true"></i>
     </summary>
     <div>
       <label>
