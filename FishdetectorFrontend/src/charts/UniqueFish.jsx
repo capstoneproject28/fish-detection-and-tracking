@@ -13,19 +13,47 @@ function SpeciesCount(jsonData) {
     // Convert the set of unique species to an array format suitable for recharts
     const chartData = Array.from(uniqueSpecies).map(species => ({ species, count: 1 }));
 
-    // Define colors for the pie chart
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+    const COLORS = [
+        '#0088FE', '#00C49F', '#FFBB28', '#FF8042',
+        // ... additional colors as previously provided
+    ];
+
+    const renderCustomLabel = (props) => {
+        const RADIAN = Math.PI / 180;
+        const { cx, cy, midAngle, innerRadius, outerRadius, payload } = props;
+        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+        const x = cx + radius * Math.cos(-midAngle * RADIAN);
+        const y = cy + radius * Math.sin(-midAngle * RADIAN);
+    
+        // Split the species name at the space character
+        const splitAt = payload.species.lastIndexOf(' ', 15); // Find last space before character 15
+        let text1, text2;
+        if (splitAt !== -1) {
+            text1 = payload.species.slice(0, splitAt);
+            text2 = payload.species.slice(splitAt + 1);
+        } else {
+            text1 = payload.species;
+            text2 = null;
+        }
+    
+        return (
+            <text x={x} y={y} fill="black" textAnchor={"middle"} dominantBaseline="central">
+                <tspan x={x} dy="0">{text1}</tspan>
+                {text2 && <tspan x={x} dy="1.2em">{text2}</tspan>}
+            </text>
+        );
+    };    
 
     return (
         <div>
-            <PieChart width={400} height={400}>
+            <PieChart width={600} height={600}>
                 <Pie
                     data={chartData}
-                    cx={200}
-                    cy={200}
+                    cx={300}
+                    cy={300}
                     labelLine={false}
-                    label={({ payload }) => payload.species}
-                    outerRadius={80}
+                    label={renderCustomLabel}
+                    outerRadius={250}
                     fill="#8884d8"
                     dataKey="count"
                 >
@@ -34,7 +62,7 @@ function SpeciesCount(jsonData) {
                     }
                 </Pie>
                 <Tooltip />
-                <Legend />
+                <Legend layout="vertical" align="right" verticalAlign="middle" />
             </PieChart>
         </div>
     );

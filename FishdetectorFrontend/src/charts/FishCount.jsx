@@ -17,7 +17,7 @@ function FishCount(jsonData) {
         <div>
             <BarChart width={600} height={300} data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="species" label={{ value: 'Species', position: 'insideBottom', offset: 0 }} />
+                <XAxis interval={0} height={100} dataKey="species" angle={-45} textAnchor="end" tick={{ fontSize: 8 }}label={{ value: 'Species', position: 'insideBottom', offset: 0 }} />
                 <YAxis label={{ value: 'Count', angle: -90, position: 'insideLeft', offset: 10 }} />
                 <Tooltip />
                 <Bar dataKey="count" fill="#8884d8" />
